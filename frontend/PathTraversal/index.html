@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <center-me>
+      <h1 id="demo">Path Traversal</h1>
+      <p>
+        In server.js, the entire frontend folder is being served via the code:
+        <code>app.use(express.static("frontend"))</code>
+        Although secrets.html is not explicitly served, because it resides in
+        the frontend folder, it is viewable, click the link and note the url.
+        Always check you're not serving files that shouldn't be served.
+      </p>
+      <a href="../secret.html">look at secret.html</a>
+    </center-me>
+  </body>
+</html>

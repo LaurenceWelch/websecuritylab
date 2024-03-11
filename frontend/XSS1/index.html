@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <center-me>
+      <h1 id="demo">XSS part 1</h1>
+      <p>
+        Javascript can be used to set the values of dom elements in HTML. In
+        this example, you can change the text. Try using values like: pears or
+        bananas. What if instead of normal text you put html markup? Try this:
+        <code>
+          &lt;img src=&#39;bad&#39; onerror=&#39;alert(1)&#39; /&gt;
+        </code>
+        frontend/XSS1/index.js is setting an element using:
+        <code> document.getElementById("name").innerHTML = inputVal </code>
+        Generally, modern web devs use frameworks like react which automatically
+        escape injected code. You could also try to sanitize the input yourself,
+        which is risky because hackers are very creative and probably know more
+        about evading sanitization attemps than you do. Generally speaking,
+        modifying the innerHTML of an element from user input should never be
+        done.
+      </p>
+      <p>I like: <span id="name">apples</span></p>
+      <div>
+        <input id="input" />
+        <button id="btn">change</button>
+      </div>
+    </center-me>
+  </body>
+</html>

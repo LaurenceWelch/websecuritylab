@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <center-me>
+      <h1 id="demo">Sql Injection</h1>
+      <p>
+        (under construction) In this example, you can get information about a
+        user. Try typing this:
+        <code>Amy</code>
+        Sql injection happens when a hacker is able to send sql code to the
+        server, the server fails to whitelist the request, the server builds a
+        query based off of the tainted user input and fails to parameterize the
+        query, the query is sent to the database, and then bad things happen.
+        Try this:
+        <code></code>
+        Solve this problem with the following: #1: Use whitelists on the server
+        to validate requests coming from the client. #2: Use parameterization on
+        your queries. In Postgres for example you can use prepared statements
+        with parameterized queries. When you use parameterization, user input
+        won't be treated as sql code.
+      </p>
+      <div>
+        <input id="input" />
+        <button id="btn">show me user</button>
+      </div>
+      <p id="p"></p>
+    </center-me>
+  </body>
+</html>

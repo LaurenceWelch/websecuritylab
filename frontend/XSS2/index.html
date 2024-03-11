@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <center-me>
+      <h1 id="demo">XSS part 2</h1>
+      <p>
+        What if devious user input is coming from the server/database? Any html
+        that consumes this data is at risk. You might have different types of
+        users consuming the data using different websites. Escaping bad input is
+        always good, but in addition, this data shouldn't ever make it to the
+        database! Whitelist all data coming from the client so that unexpected
+        input doesn't get inserted into your database. In this example, another
+        img tag was inserted into the database because the endpoint didn't use
+        validation. Click the button to make a fetch request which will retrieve
+        data from the posts database. Solution: validate all input coming from
+        the client. Validiation often times includes straight up rejecting user
+        input. For a good user experience, validate user input on the client.
+        For security, validate user input hitting the server.
+      </p>
+      <button id="btn">fetch posts</button>
+      <p id="p"></p>
+    </center-me>
+  </body>
+</html>

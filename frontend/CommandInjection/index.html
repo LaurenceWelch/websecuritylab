@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <center-me>
+      <h1 id="demo">Command Injection</h1>
+      <p>
+        In this example, the server allows users to echo something. You can try
+        to input something like:
+        <code>hey you</code>
+        The important aspect of this, is that the backend server is executing a
+        system command. The backend is taking user input and appending it to the
+        command, this is very bad.
+        <code> exec("echo " + userinput, (e, stdout, stderr)) </code>
+        One feature of system commands is that you can string multiple commands
+        together using various symbols. Try these (on windows try dir instead of
+        ls):
+        <code>yo && ls</code>
+        <code>yo && whoami</code>
+        Bad right? If you must allow user input driven system commands (but
+        why?), carefully validate user input using a whitelist. Additionally,
+        the user running the server app should have very limited privileges.
+      </p>
+      <div>
+        <input id="input" />
+        <button id="btn">echo it</button>
+      </div>
+      <p id="p"></p>
+    </center-me>
+  </body>
+</html>

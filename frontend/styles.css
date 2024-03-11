@@ -1,0 +1,46 @@
+* {
+  font-size: 20px;
+}
+
+center-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+a {
+  margin: 10px;
+  display: block;
+  text-align: center;
+}
+
+code {
+  display: block;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 3px;
+  background-color: #eaeaea;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+hint {
+  width: 50%;
+  padding: 5px;
+  color: gray;
+  border: 1px solid black;
+  display: block;
+  margin: 10px;
+}
+
+hint-text {
+  border-radius: 10px;
+  color: black;
+  display: block;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+}
